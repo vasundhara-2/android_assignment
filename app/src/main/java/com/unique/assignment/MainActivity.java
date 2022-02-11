@@ -29,7 +29,6 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String url = "http://machinetest.erpguru.in/service.asmx/GetCustomerRegisteredByApp_1_0";
     private ProgressBar loadingPB;
     private LinearLayoutManager mLayoutManager_vertical;
     private RecyclerView recyclerView;
@@ -107,10 +106,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        loadingPB.setVisibility(View.VISIBLE);
+         String url = "http://machinetest.erpguru.in/service.asmx/GetCustomerRegisteredByApp_1_0";
 
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
 
+        loadingPB.setVisibility(View.VISIBLE);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

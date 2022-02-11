@@ -10,7 +10,6 @@
     tools:context=".MainActivity">
 
 
-    <!-- viewpager to show images -->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPagerMain"
         android:layout_width="match_parent"

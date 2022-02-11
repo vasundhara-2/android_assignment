@@ -24,13 +24,13 @@ import org.json.JSONObject;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
 
 
-    private final JSONArray jsonArray;
-    JSONObject jsonMainObject;
+    private  JSONArray jsonArray;
+    private JSONObject jsonMainObject;
 
-    Context context;
+    private Context context;
     private String name, routeName, villageName, srNo;
-    SQLiteDatabase sqLiteDatabaseObj;
-    String NameHolder = "vasu", VillageHolder = "magi", RouteHolder = "hjjh", SQLiteDataBaseQueryHolder;
+    private SQLiteDatabase sqLiteDatabaseObj;
+    private String SQLiteDataBaseQueryHolder;
 
     public DataAdapter(MainActivity mainActivity, JSONArray jsonArray, JSONObject jsonMainObject) {
         this.jsonArray = jsonArray;
